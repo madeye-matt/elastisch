@@ -73,6 +73,7 @@
                     (.http-opts conn)
                     options
                     {:accept :json
+                     :content-type :json
                      :body (json/encode body)})]
     (parse-safely   
      (:body (http/put uri args)))))
